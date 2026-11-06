@@ -226,12 +226,14 @@ header{top:env(safe-area-inset-top,0px)!important}
     f.addEventListener('submit',function(e){
       e.preventDefault();
       var btn=f.querySelector('[type=submit]'); if(btn){btn.disabled=true;}
-      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      fetch(window.location.pathname,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
       .then(function(r){ if(!r.ok) throw 0;
         var msg=document.createElement('p'); msg.setAttribute('role','status'); msg.style.cssText='margin:0;font-size:15px;line-height:1.6';
         msg.textContent=f.getAttribute('name')==='booking'?"Thanks! We got your request and will call or email you to confirm a time.":"You're on the list. Thanks!";
         f.replaceWith(msg);
-      }).catch(function(){ if(btn){btn.disabled=false;} alert('Something went wrong. Please call us at (805) 309-0222.'); });
+      }).catch(function(){ if(btn){btn.disabled=false;}
+        var err=f.querySelector('.ferr'); if(!err){err=document.createElement('p');err.className='ferr';err.setAttribute('role','alert');err.style.cssText='margin:0;font-size:14px;line-height:1.5;color:#B5562F;flex-basis:100%';f.appendChild(err);}
+        err.textContent='Sorry, that didn\u2019t go through. Please try again or call us at (805) 309-0222.'; });
     });
   });
 })();
