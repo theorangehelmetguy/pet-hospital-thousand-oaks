@@ -58,6 +58,7 @@ a{color:#23301F}
 .rcar{display:grid;grid-template-columns:36px minmax(0,1fr) 36px;gap:8px;align-items:center}.rtrack{display:grid;grid-auto-flow:column;grid-auto-columns:100%;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;outline:none}.rtrack::-webkit-scrollbar{display:none}.rcard{margin:0;scroll-snap-align:start;padding-top:24px;border-top:1px solid rgba(246,240,230,0.2);display:flex;flex-direction:column;gap:16px}.rarrow{width:36px;height:36px;border:none;background:transparent;color:#F6F0E6;opacity:.75;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}.rarrow:hover{opacity:1}@media (min-width:960px){.rcar{grid-template-columns:44px minmax(0,1fr) 44px;gap:24px}.rtrack{grid-auto-columns:calc((100% - 96px)/3);gap:48px}}
 .rbar{margin-top:10px;display:flex;align-items:stretch;border-radius:10px;background:#EDE5D6}.rcell{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 10px;color:#23301F;text-decoration:none;border-radius:10px;transition:background .2s}.rcell:hover{background:#E6DCC9}.rlogo{flex:none;width:36px;height:36px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(35,48,31,0.08)}.rscore{font-size:30px;line-height:1}.d-inl{display:none}@media (min-width:600px){.d-inl{display:inline}}.rdiv{width:1px;margin:12px 0;background:rgba(35,48,31,0.18)}@media (max-width:380px){.rcell{gap:8px;padding:12px 6px}.rlogo{width:30px;height:30px}.rscore{font-size:26px}}@media (min-width:960px){.rcell{padding:18px 16px;gap:14px}.rscore{font-size:34px}}
 @media (min-width:1900px){.page{zoom:1.125}}
+.fbadge{position:absolute;z-index:2;right:10px;bottom:10px;width:115px;height:auto!important;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.3);display:block}@media (min-width:960px){.fbadge{width:234px;right:24px;bottom:24px;border-radius:10px}}@media (max-width:959px){.rcell{gap:7px;padding:10px 6px}.rlogo{width:28px;height:28px}.rlogo svg{width:16px;height:16px}.rscore{font-size:22px}.rcell>span:last-child svg{width:9px;height:9px}.rcell>span:last-child>span:last-child{font-size:11px}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 [hidden]{display:none!important}
 header{top:env(safe-area-inset-top,0px)!important}
@@ -103,7 +104,8 @@ header{top:env(safe-area-inset-top,0px)!important}
 <section class="wrap" style="padding-top: clamp(24px, 4vw, 56px); padding-bottom: clamp(64px, 8vw, 120px)">
 <div class="hero">
 <div style="position: relative">
-<div class="arch heroimg" style="background: #D7DEC8">
+<div class="arch heroimg" style="position: relative; background: #D7DEC8">
+<img class="fbadge" src="/images/fave-badge.webp" alt="2026 Nextdoor Fave Awards winner, voted by neighbors on Nextdoor" width="700" height="258" decoding="async">
 <img src="/images/team.webp" alt="The Pet Hospital of Thousand Oaks veterinary team outside the clinic on Lombard Street in Thousand Oaks, CA" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%" width="1600" height="1344" decoding="async" fetchpriority="high">
 </div>
 <div class="rbar">
